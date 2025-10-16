@@ -7,7 +7,14 @@ Repository for comparing and contrasting Docker and Podman, as well as putting t
 3. Run the following Docker or Podman commands below to build the image and run the container.
 
 ## Commands for Docker and Podman
+These commands are the same but either run with ```docker``` or ```podman``` depending on which you are using. I will be replacing these with ```platform``` to convey that they are the same for both platforms for the following examples.
 
-### Docker Commands:
+### Image Commands:
+- To build the image run: ```<platform> build -t <image-name> <directory-containing-code-and-Dockerfile>```
+- List images: ```<platform> images```
 
-### Podman Commands:
+### Container Commands:
+- To run the container run: ```<platform> run <image-name>```
+- To map ports add this flag to the run command: ```-p <host-port>:<container-port>```
+- Example: ```<platform> run -p 8000:5000 <image-name>```
+- To list containers: ```<platform> ps```
