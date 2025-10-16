@@ -14,5 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the C source code into the container
 COPY networking.py .
 
+ENV FLASK_APP=networking.py
+
+EXPOSE 5000
+
 # Define the command to run when the container starts
 CMD ["python", "networking.py"]
